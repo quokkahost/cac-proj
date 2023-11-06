@@ -1,0 +1,37 @@
+step "Run a Script" {
+
+    action {
+        action_type = "Octopus.Script"
+        notes = "octo"
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                echo """
+                
+                
+                                        ___
+                                     .-'   \`'.
+                                    /         \\
+                                    |         ;
+                                    |         |           ___.--,
+                           _.._     |0) ~ (0) |    _.---'\`__.-( (_.
+                    __.--'\`_.. '.__.\\    '--. \\_.-' ,.--'\`     \`\"\"\`
+                   ( ,.--'\`   ',__ /./;   ;, '.__.'\`    __
+                   _\`) )  .---.__.' / |   |\\   \\__..--\"\"  \"\"\"--.,_
+                  \`---' .'.''-._.-'\`_./  /\\ '.  \\ _.-~~~\`\`\`\`~~~-._\`-.__.'
+                        | |  .' _.-' |  |  \\  \\  '.               \`~---\`
+                         \\ \\/ .'     \\  \\   '. '-._)
+                          \\/ /        \\  \\    \`=.__\`~-.
+                     jgs  / /\\         \`) )    / / \`\"\".\`\\
+                    , _.-'.'\\ \\        / /    ( (     / /
+                     \`--~\`   ) )    .-'.'      '.'.  | (
+                            (/\`    ( (\`          ) )  '-;
+                             \`      '-;         (-'
+                
+                """
+            EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+        }
+    }
+}
