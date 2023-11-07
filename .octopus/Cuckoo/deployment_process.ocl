@@ -30,7 +30,6 @@ step "Run a Script" {
                 
                 """
                 
-                echo $(get_octopusvariable "supersecret")
                 echo $(get_octopusvariable "flag")
             EOT
             Octopus.Action.Script.ScriptSource = "Inline"
